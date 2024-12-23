@@ -1,0 +1,68 @@
+tensorflow.org adresi üzerinde dökümantasyon mevcut.
+
+
+PERCEPTRON
+Nöronları takip eden bilgisayar yapısıdır.
+Bir veya birden fazla girdiden çıktı üretir. 
+
+
+Girdilerin yanında, bu girdilerin ağırlıkları da önemlidir. Girdinin içeriğinin sonucu etkilemesinde ağırlık da önemli etki eder. 
+
+Bias, gelen girdilerin sıfır olması durumunda kullanılan bir sabittir.
+x^2+yx+b fonksiyonundaki b sabiti gibi düşünebiliriz.
+
+Hidden layer sayısı 2 veya daha fazlaysa, bu networke deep network denir.
+
+
+********** AKTİVASYON FONKSİYONLARI ******************
+
+A)Sigmoid Fonksiyonu
+
+0 ile 1 arasında değer alır.
+Sınıflandırma problemlerini çözmek amacıyla kullanılır. (genellikle)
+
+
+B)Tanh Fonksiyonu
+- (-1) ile 1 arasında değer alır.
+- Negatif değerlerle daha geniş bir kapsam sağlar ve genellikle sınıflandırma operasyonlarında kullanılır.
+
+c) ReLU Fonksiyonu
+-0 ile sonsuz arasında değer alır.
+-Derin öğrenmede sıklıkla kullanılır.
+
+d)Lineer Fonksiyonlar
+-f(x) = x 
+-Sonsuz değer alabilir fakat not-linear olmaması sebebiyle modelde sorun çıkarabilir.
+
+
+
+************************* REGRESYON ********************************
+Bir problemi çözmeye yönelik oluşturulan denklem.
+
+Y = a*x + b
+
+Y = sonuç
+x = özellik
+a = ağırlık
+b = bias sabiti
+
+
+
+MALİYET FONKSİYONU
+Gerçek veriden ne kadar uzaklıkta olduğumuzu ölçen fonksiyondur. 
+
+z= a*g +b
+f(z) = tahminiDeğer(nöronun tahmini)
+
+quadratic maliyet = sum(gercekDeger-tahminiDeger)**2/n
+cross entropy maliyet = (-1/n)*sum(gerçekDeğer*In(tahminiDeger) + (1-gerçekDeğer) * In(1-tahminiDeğer)
+
+
+
+Gradient Descent 
+Bir fonksiyonun minimumunu bulmak için kullandığımız optimizasyon fonksiyonu
+maliyet fonksiyonunu minimize etmek için kullanabiliriz.
+learning rate, bu grafik üzerinde atlama hızımızdır.
+
+optimizasyonu için popüler seçenekler : RMSProp, Adam
+
